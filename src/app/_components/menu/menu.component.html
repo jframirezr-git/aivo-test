@@ -1,0 +1,10 @@
+<mat-card class="example-card">
+  <mat-card-header>
+      <img mat-card-avatar class="avatar" [src]="url">
+    <mat-card-subtitle>{{nombre}}</mat-card-subtitle>
+  </mat-card-header>
+</mat-card>
+<div class="marginButtons" *ngFor="let d of data; index as i">
+  <app-menu-button [data]="d"></app-menu-button>
+</div>
+
