@@ -9,7 +9,7 @@ import { HeaderComponent } from './_components/header/header.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MenuButtonComponent } from './_components/menu-button/menu-button.component';
 import { MenuComponent } from './_components/menu/menu.component';
-import { AdminRoutingModule } from './app-admin/admin-routing.module';
+import { AdminRoutingModule } from './app-client/admin-routing.module';
 import { AuthRoutingModule } from './_auth/auth-routing.module';
 
 @NgModule({

@@ -3,6 +3,7 @@
   margin-top: 5px;
   white-space: initial;
   font-size: 12px;
+  overflow: scroll;
 }
 
 .mat-expansion-panel-header{
@@ -15,6 +16,10 @@
   .mat-expansion-panel-header{
     padding: 0 14px;
     font-size: 14px;
+  }
+
+  .mat-raised-button {
+    overflow: visible;
   }
 }
 

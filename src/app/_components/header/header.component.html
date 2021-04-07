@@ -1,6 +1,6 @@
 <p>
   <mat-toolbar>
-    <button class="decorator"type="button" mat-raised-button color="primary" (click)="sideNave()">
+    <button class="decorator"type="button" mat-raised-button color="primary" (click)="sideNave()" *ngIf="isLoginPath">
       <mat-icon>menu</mat-icon>
     </button>
     <span class="decoratorLogo">
@@ -9,7 +9,7 @@
     <span class="decorator">
       <img class="logo" src="/assets/img/logo-bancolombia.png">
     </span>
-    <button class="decorator" mat-raised-button color="primary">
+    <button class="decorator" mat-raised-button color="primary" *ngIf="isLoginPath">
       <mat-icon>account_circle</mat-icon>
     </button>
   </mat-toolbar>

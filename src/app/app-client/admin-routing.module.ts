@@ -7,10 +7,10 @@ import { HomeComponent } from './home/home.component';
 const routes: Routes = [
   {path: 'home', component: HomeComponent,
    children: [
-    {path:'dashboard', component: DashboardComponent},
-    {path: '**', redirectTo:'dashboard'}
+    {path: 'dashboard', component: DashboardComponent},
+    {path: '**', redirectTo: 'dashboard'}
   ]}
-]
+];
 
 @NgModule({
   imports: [
