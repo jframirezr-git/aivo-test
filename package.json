@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "production:dev": "ng build --prod && aws s3 sync dist/ s3://d8b9808g-bj57-4d0f-aafa-k59285ffccf7.7wayops.co --delete"
+    "production:dev": "rm -rf dist && ng build --prod && aws s3 sync dist/SevenWaysOps-Client/ s3://d8b9808g-bj57-4d0f-aafa-k59285ffccf7.7wayops.co --delete"
   },
   "private": true,
   "dependencies": {
