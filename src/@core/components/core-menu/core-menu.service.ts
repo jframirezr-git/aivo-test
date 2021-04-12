@@ -3,8 +3,8 @@ import { Router } from '@angular/router';
 
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
 
-import { AuthenticationService } from 'app/auth/service';
-import { User } from 'app/auth/models';
+import { AuthenticationService } from 'auth/service';
+import { User } from 'auth/models';
 
 @Injectable({
   providedIn: 'root'
