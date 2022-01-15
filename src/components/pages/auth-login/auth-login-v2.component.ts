@@ -5,6 +5,8 @@ import { takeUntil } from 'rxjs/operators'
 import { Subject } from 'rxjs'
 import { Router } from '@angular/router'
 import { CoreConfigService } from '@core/services/config.service'
+import {Accounts} from "../../../@fake-db/accounts";
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-auth-login-v2',
@@ -79,10 +81,25 @@ export class AuthLoginV2Component implements OnInit {
     // Login
     this.loading = true
 
-    // redirect to home page
-    setTimeout(() => {
-      this._router.navigate(['/'])
-    }, 100)
+    const profiles = Accounts.data;
+
+    if(profiles.user.email === this.loginForm.controls.email.value &&
+      profiles.user.password === this.loginForm.controls.password.value
+    ){
+      this._router.navigate(['/home'])
+    }else if(profiles.admin.email === this.loginForm.controls.email.value &&
+      profiles.admin.password === this.loginForm.controls.password.value
+    ){
+      this._router.navigate(['/home'])
+    }else {
+      this.loading = false;
+      this.submitted = false;
+      Swal.fire({
+        icon: 'warning',
+        title: '¡Atención!',
+        text: `Email o contraseña equivocada.`,
+      });
+    }
   }
 
   // Lifecycle Hooks

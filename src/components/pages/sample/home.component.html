@@ -3,30 +3,51 @@
     <!-- content-header component -->
     <app-content-header [contentHeader]="contentHeader"></app-content-header>
 
-    <!-- Basic Alerts start -->
-    <section id="home-page">
+
+    <!--filter-->
+    <div class="card">
+      <h5 class="card-header">Filtrar</h5>
+      <div class="card-body">
+    <div class="users-list-filter">
       <div class="row">
-        <div class="col-12">
-          <div class="card">
-            <div class="card-header">
-              <h4 class="card-title">Kick start your project 🚀</h4>
-            </div>
-            <div class="card-body pb-1">
-              <p class="card-text">All the best for your new project.</p>
-              <p class="card-text">
-                Please make sure to read our
-                <a
-                  href="https://pixinvent.com/demo/vuexy-angular-admin-dashboard-template/documentation/"
-                  target="_blank"
-                  >Template Documentation</a
-                >
-                to understand where to go from here and how to use our template.
-              </p>
-            </div>
+        <div class="col-12 col-md-4">
+          <div class="form-group">
+            <label>Nombre</label>
+
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="form-group">
+            <label>Fecha</label>
+
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="form-group">
+            <label>Nombre</label>
+
           </div>
         </div>
       </div>
-    </section>
-    <!-- Basic Alerts end -->
+    </div>
+      </div>
+    </div>
+    <!--End filter-->
+    <div  class="row match-height">
+      <div class="col-lg-3 col-sm-6 col-12" *ngFor="let movie of movies">
+        <div class="card">
+          <div class="card-header d-flex flex-column align-items-center pb-0">
+              <div class="avatar-content">
+                <img [src]="movie.images.poster_art.url" style="height: 200px; height: 200px">
+              </div>
+            <p class="mb-0 pt-1 text-center font-weight-bold">{{movie.title}}</p>
+            <hr>
+            <p class="mb-0 pt-1 text-center">{{movie.description}}</p>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>

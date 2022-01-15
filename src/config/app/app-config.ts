@@ -16,9 +16,9 @@ import { CoreConfig } from '@core/types'
 // prettier-ignore
 export const coreConfig: CoreConfig = {
   app: {
-    appName     : '7Wayops',                                // App Name
-    appTitle    : '7Wayops',                                // App Title
-    appLogoImage: 'assets/images/7wayops/wayops-logo.png',  // App Logo
+    appName     : 'Aivo',                                // App Name
+    appTitle    : 'Aivo',                                // App Title
+    appLogoImage: 'assets/images/logo/logo.png',  // App Logo
   },
   layout: {
     skin  : 'default',                        // default, dark, bordered, semi-dark
