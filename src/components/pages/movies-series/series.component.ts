@@ -9,10 +9,10 @@ import { CoreTranslationService } from '@core/services/translation.service'
 
 @Component({
   selector: 'app-sample',
-  templateUrl: './sample.component.html',
-  styleUrls: ['./sample.component.scss']
+  templateUrl: './series.component.html',
+  styleUrls: ['./series.component.scss']
 })
-export class SampleComponent implements OnInit {
+export class SeriesComponent implements OnInit {
   public contentHeader: object
 
   /**

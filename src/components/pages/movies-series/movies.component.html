@@ -13,22 +13,31 @@
         <div class="col-12 col-md-4">
           <div class="form-group">
             <label>Nombre</label>
-
+            <input class="form-control"  placeholder="nombre" [(ngModel)]="name" >
           </div>
         </div>
         <div class="col-12 col-md-4">
           <div class="form-group">
             <label>Fecha</label>
-
-          </div>
-        </div>
-        <div class="col-12 col-md-4">
-          <div class="form-group">
-            <label>Nombre</label>
-
+            <div class="input-group">
+              <input class="form-control" [startDate]="fromDate" placeholder="yyyy-mm-dd"
+                     [(ngModel)]="startDatePicker" ngbDatepicker #startDPdata="ngbDatepicker">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary feather icon-calendar" (click)="startDPdata.toggle()"
+                        type="button" rippleEffect></button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+      <button type="button" class="btn btn-primary ml-1" (click)="filter()">
+        <i data-feather="plus" class="d-sm-none d-inline-block mr-0 mr-sm-1"></i><span
+        class="d-none d-sm-inline-block">Aplicar filtro</span>
+      </button>
+      <button type="button" class="btn btn-outline-primary ml-1" rippleEffect
+              (click)="getMovie()">
+        <span [data-feather]="'clipboard'" [class]="'mr-25'"></span>Limpiar
+      </button>
     </div>
       </div>
     </div>
